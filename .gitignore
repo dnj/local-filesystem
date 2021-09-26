@@ -1,0 +1,6 @@
+coverage/
+vendor/
+.phpunit.cache/
+phpcs-quality-report.json
+junit.xml
+.php-cs-fixer.cache
