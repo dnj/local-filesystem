@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29d2611bcbdf5c084287a7aaf23240d3",
+    "content-hash": "9d58201b3a7be2b34ba73ab29a1a9c8a",
     "packages": [
         {
             "name": "dnj/filesystem",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dnj/filesystem.git",
@@ -28,7 +28,6 @@
                 "phpstan/phpstan": "^0.12.68",
                 "phpunit/phpunit": "^9.5"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -41,7 +40,7 @@
             ],
             "support": {
                 "issues": "https://github.com/dnj/filesystem/issues",
-                "source": "https://github.com/dnj/filesystem/tree/master"
+                "source": "https://github.com/dnj/filesystem/tree/1.0.0"
             },
             "time": "2021-09-26T19:25:16+00:00"
         }
@@ -4213,9 +4212,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "dnj/filesystem": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

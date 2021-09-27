@@ -4,7 +4,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.4",
-        "dnj/filesystem": "dev-master"
+        "dnj/filesystem": "^1.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
