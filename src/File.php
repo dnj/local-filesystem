@@ -14,7 +14,7 @@ class File extends FileAbstract
      */
     public function write(string $data): void
     {
-        $wrote = @file_put_contents($this->getPath(), $data, FILE_APPEND);
+        $wrote = @file_put_contents($this->getPath(), $data);
         if (false === $wrote or $wrote < strlen($data)) {
             throw IOException::fromLastError($this);
         }
