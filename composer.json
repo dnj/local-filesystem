@@ -1,5 +1,6 @@
 {
     "name": "dnj/local-filesystem",
+    "description": "Local disk implementation of dnj/filesystem",
     "type": "library",
     "license": "MIT",
     "require": {
@@ -17,10 +18,15 @@
         }
     },
     "scripts": {
+        "test:composer:validate": "@composer validate",
+        "test:composer": [
+            "@test:composer:validate"
+        ],
         "test:types": "vendor/bin/phpstan analyze",
         "test:phpunit": "vendor/bin/phpunit",
         "test:codestyle": "vendor/bin/php-cs-fixer fix -v --dry-run --stop-on-violation --using-cache=no",
         "test": [
+            "@test:composer",
             "@test:types",
             "@test:phpunit",
             "@test:codestyle"

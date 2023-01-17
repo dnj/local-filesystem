@@ -1,0 +1,44 @@
+name: Tests
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        php: ['7.4', '8.0']
+
+    name: PHP ${{ matrix.php }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+
+      - name: Check Versions
+        run: |
+            php -v
+            php -m
+            composer --version
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: PHP Static Analysis
+        run: composer run-script test:types
+
+      - name: PHP Unit tests
+        run: composer run-script test:phpunit
+        
+      - name: PHP codestyle
+        run: composer run-script test:codestyle
