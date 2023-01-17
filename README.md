@@ -8,7 +8,7 @@
 
 This is a simple implemenetation of [DNJ\FileSystem][repo-dnj-filesystem] for local disk based file system.
 * Latest versions of PHP and PHPUnit and PHPCsFixer
-* Best practices applied:irenweb.com
+* Best practices applied:
   * [`README.md`][link-readme] (badges included)
   * [`LICENSE`][link-license]
   * [`composer.json`][link-composer-json]
@@ -119,7 +119,7 @@ use dnj\Filesystem\Local\File;
 
 $file = new File('~/test-dnj-delete-file.txt');
 $file->write('Hello World!');
-echo $file->read(); // prints: Hello World!
+$file->delete();
 ```
 Append to file:
 ```php
@@ -165,7 +165,7 @@ $dir = new Directory('/tmp/');
 if ($dir->exists()) {
     // $directory->file() returns Generator of dnj\Filesystem\Local\File;
     $recursive = false;
-    foreach ($directory->files() as $file) {
+    foreach ($directory->files($recursive) as $file) {
         echo $file->getPath() . PHP_EOL;
     }
 }
@@ -222,8 +222,8 @@ Get size of a directory:
 use dnj\Filesystem\Local\Directory;
 
 $dir = new Directory('/tmp/');
-$recursively = false;
-echo $dir->size($recursively);
+$recursively = true;
+echo $dir->size($recursively); // prints the size of directory and all of it's contents
 ```
 
 Get file from directory:
@@ -235,19 +235,7 @@ $parent = new Directory('/tmp/');
 $file = $parent->file('test-file.txt');
 $file->write('https://dnj.co.ir');
 
-echo $directory->getPath(); // prints: /tmp/test-file.txt
-```
-
-Get directory from directory:
-```php
-<?php
-use dnj\Filesystem\Local\Directory;
-
-$parent = new Directory('/tmp/');
-$directory = $parent->file('test-directory');
-$directory->make();
-
-echo $directory->getPath(); // prints: /tmp/test-directory
+echo $file->getPath(); // prints: /tmp/test-file.txt
 ```
 
 Get directory from directory:
