@@ -1,8 +1,9 @@
 # PHP Local FileSystem (Local disk implementation of dnj/filesystem)
  
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]][link-license]
 [![Total Downloads][ico-downloads]][link-downloads]
+[![Software License][ico-license]][link-license]
+[![Testing status][ico-workflow-test]][link-workflow-test]
  
 ## Introduction 
 
@@ -274,7 +275,9 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [ico-version]: https://img.shields.io/packagist/v/dnj/local-filesystem.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/dnj/local-filesystem.svg?style=flat-square
+[ico-workflow-test]: https://github.com/dnj/local-filesystem/actions/workflows/test.yaml/badge.svg
 
+[link-workflow-test]: https://github.com/dnj/local-filesystem/actions/workflows/test.yaml
 [link-packagist]: https://packagist.org/packages/dnj/local-filesystem
 [link-license]: https://github.com/dnj/local-filesystem/blob/master/LICENSE
 [link-downloads]: https://packagist.org/packages/dnj/local-filesystem
