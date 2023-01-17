@@ -19,7 +19,11 @@ This is a simple implemenetation of [DNJ\FileSystem][repo-dnj-filesystem] for lo
 * Some useful resources to start coding
 
 ## How To Use
-This is an implementation of local disk filesystem that allows you to work  with local files.
+This is an implementation of local disk filesystem that allows you to work  with local files.\
+First of all, you need to add this library to your project, so run:
+```bash
+composer require dnj/local-filesystem
+```
 
 ### File basic usage:
 
